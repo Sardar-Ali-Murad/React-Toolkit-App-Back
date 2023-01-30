@@ -164,7 +164,7 @@ const forgotPassword = async (req, res) => {
 
 
 // =======
-    const origin="http://localhost:3000"
+    const origin="https://real-estate-app-sardar.vercel.app"
 // >>>>>>> fd4d393fa2b6f5a8f400bb81065c53dfdd7f9f11
     await sendResetPassswordEmail ({
       name: user.name,

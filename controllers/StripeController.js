@@ -5,7 +5,7 @@ const stripe = new Stripe("sk_test_51L3igsAX34JgbNaA19MxqmKDjvdslkw99t2XIaGTNN7Z
 // const YOUR_DOMAIN = 'http://localhost:3000'
 
 // For the production
-const YOUR_DOMAIN="http://localhost:3000"
+const YOUR_DOMAIN="https://real-estate-app-sardar.vercel.app"
 
 const getStripe=async (req,res)=>{
     if (req.method === 'POST') {
