@@ -7,9 +7,14 @@ const attachCookie = ({ res, token }) => {
   //   secure: process.env.NODE_ENV === 'production',
   // });
   
-  var randomNumber=Math.random().toString();
-  randomNumber=randomNumber.substring(2,randomNumber.length);
-  res.cookie('token',token, { maxAge: 900000, httpOnly: true });
+  // var randomNumber=Math.random().toString();
+  // randomNumber=randomNumber.substring(2,randomNumber.length);
+//   let options = {
+//     maxAge: 1000 * 60 * 15, // would expire after 15 minutes
+//     httpOnly: true, // The cookie only accessible by the web server
+//     signed: true // Indicates if the cookie should be signed
+// }
+  res.cookie('token',token);
   
 };
 
