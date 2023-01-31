@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import 'express-async-errors';
 import morgan from 'morgan';
-import cors from "cors"
+// import cors from "cors"
 
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -64,14 +64,14 @@ app.use(cookieParser());
 app.use(fileUpload({ useTempFiles: true }));
 
 
-app.use(cors({
-  credentials: true,
+// app.use(cors({
+  // credentials: true,
 // <<<<<<< HEAD
   // origin: ['http://localhost:3000',"https://akbuilderpk.onrender.com"]
 // =======
-  origin: ["https://real-estate-app-sardar.vercel.app","http://localhost:3000"]
+  // origin: ["https://real-estate-app-sardar.vercel.app","http://localhost:3000"]
 // >>>>>>> fd4d393fa2b6f5a8f400bb81065c53dfdd7f9f11
-}))
+// }))
 
 
 
@@ -81,6 +81,8 @@ app.use('/api/v1/NewsLetter', NewsLetter);
 app.use('/api/v1/Orders', authenticateUser,Orders);
 app.use("/api/v1",StripeRoute)
 app.use("/api/v1",googleLogin)
+
+// https://github.com/Sardar-Ali-Murad/React-Toolkit-App-Back.git
 
 
 
