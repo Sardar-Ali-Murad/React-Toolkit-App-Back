@@ -69,7 +69,7 @@ app.use(cors({
 // <<<<<<< HEAD
   // origin: ['http://localhost:3000',"https://akbuilderpk.onrender.com"]
 // =======
-  origin: ["https://real-estate-app-sardar.vercel.app"]
+  origin: ["https://real-estate-app-sardar.vercel.app","http://localhost:3000"]
 // >>>>>>> fd4d393fa2b6f5a8f400bb81065c53dfdd7f9f11
 }))
 
