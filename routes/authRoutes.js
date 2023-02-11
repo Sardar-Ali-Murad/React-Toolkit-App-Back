@@ -25,9 +25,8 @@ import testUser from '../middleware/testUser.js';
 router.route('/register').post( register);
 router.route('/login').post(login);
 router.post('/logout', logout);
-router.route('/uploadImage').post( uploadImage);
+router.route('/uploadImage').post( authenticateUser,uploadImage);
 router.route('/updateImage').post( authenticateUser,updateImage);
-
 
 router.route("/updatePassword").post(authenticateUser,updatePassord)
 

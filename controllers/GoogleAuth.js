@@ -21,9 +21,9 @@ const Login=async (req,res)=>{
       if(AlreadyExistsUser){
             const user = await User.findOne({ email }).select('+password')
             const token = user.createJWT();
-            attachCookie({ res, token });
+            // attachCookie({ res, token });
             user.password = undefined;
-            res.status(StatusCodes.OK).json({ user, location: user.location })
+            res.status(StatusCodes.OK).json({ user, location: user.location,token:token })
     }
     
     else{
@@ -33,10 +33,11 @@ const Login=async (req,res)=>{
         }
         const user = await User.create({ name, email, password:"2cesqxue",role:req.body.role});
         const token = user.createJWT();
-        attachCookie({ res, token });
+        // attachCookie({ res, token });
         res.status(StatusCodes.CREATED).json({
             user:user,
             location: user.location,
+            token:token
         })
     }
 
