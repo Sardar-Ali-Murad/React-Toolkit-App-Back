@@ -70,7 +70,7 @@ const updateUser = async (req, res) => {
   const token = updatedUser.createJWT();
   // attachCookie({ res, token });
 
-  res.status(StatusCodes.OK).json({ user:updateUser, location: updateUser.location,token:token });
+  res.status(StatusCodes.OK).json({ user:updatedUser, location: updatedUser.location,token:token });
 };
 
 const getCurrentUser = async (req, res) => {
